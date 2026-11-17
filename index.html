@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adi Putra Maulana — Portofolio Profesional</title>
+    
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        latte: {
+                            light: '#FAF6F1',    // Background utama
+                            DEFAULT: '#F3ECE2',  // Card & Secondary background
+                            dark: '#E5D9C8',     // Border & Divider
+                        },
+                        espresso: {
+                            light: '#7A5C49',    // Teks sekunder / Muted
+                            DEFAULT: '#3E2723',  // Aksen utama
+                            dark: '#23140E',     // Teks utama & Tombol
+                        },
+                        caramel: '#B07D56',      // Aksen halus
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D5C5B3;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7A5C49;
+        }
+    </style>
+</head>
+<body class="bg-latte-light text-espresso-dark font-sans antialiased selection:bg-espresso selection:text-latte-light">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-latte-light/85 backdrop-blur-md border-b border-latte-dark/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl md:text-2xl font-bold tracking-tight text-espresso-dark">
+                Adi Putra<span class="text-caramel">.</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-espresso-light">
+                <a href="#tentang" class="hover:text-espresso-dark transition-colors">Tentang</a>
+                <a href="#pengalaman" class="hover:text-espresso-dark transition-colors">Pengalaman</a>
+                <a href="#organisasi" class="hover:text-espresso-dark transition-colors">Kepemimpinan</a>
+                <a href="#keahlian" class="hover:text-espresso-dark transition-colors">Keahlian & Sertifikasi</a>
+                <a href="#kontak" class="px-5 py-2.5 bg-espresso-dark text-latte-light rounded-full hover:bg-espresso transition-all shadow-sm">
+                    Hubungi Saya
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-espresso-dark focus:outline-none" aria-label="Buka Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-latte-light border-b border-latte-dark px-6 py-6 space-y-4">
+            <a href="#tentang" class="block text-base font-medium text-espresso-dark hover:text-caramel">Tentang Saya</a>
+            <a href="#pengalaman" class="block text-base font-medium text-espresso-dark hover:text-caramel">Pengalaman Kerja & Magang</a>
+            <a href="#organisasi" class="block text-base font-medium text-espresso-dark hover:text-caramel">Organisasi & Kepanitiaan</a>
+            <a href="#keahlian" class="block text-base font-medium text-espresso-dark hover:text-caramel">Keahlian & Sertifikasi</a>
+            <a href="#kontak" class="inline-block w-full text-center px-5 py-3 bg-espresso-dark text-latte-light rounded-full font-medium">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-latte border border-latte-dark text-espresso text-xs md:text-sm font-medium tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-caramel"></span>
+                    <span>A journey of Knowledge, Care &amp; Impact</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-espresso-dark leading-[1.15]">
+                    Adi Putra Maulana
+                </h1>
+
+                <p class="text-lg md:text-xl font-medium text-espresso">
+                    Human Resources &amp; Administration Specialist
+                </p>
+
+                <p class="text-base md:text-lg text-espresso-light leading-relaxed max-w-2xl">
+                    Lulusan D3 Manajemen Administrasi Universitas Sebelas Maret (<strong class="text-espresso-dark font-semibold">IPK 3.88/4.00</strong>). Berdedikasi menciptakan tata kelola administrasi yang presisi dan pengembangan sumber daya manusia yang berdampak positif bagi organisasi.
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-4">
+                    <a href="#pengalaman" class="px-7 py-3.5 bg-espresso-dark text-latte-light rounded-full font-medium text-sm md:text-base hover:bg-espresso transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <span>Jelajahi Pengalaman</span>
+                        <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/adiputramaulanaa" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-transparent border border-espresso-dark/30 text-espresso-dark rounded-full font-medium text-sm md:text-base hover:bg-latte transition-all flex items-center gap-2">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+
+                <div class="pt-8 border-t border-latte-dark/70 grid grid-cols-3 gap-6 max-w-lg">
+                    <div>
+                        <p class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark">3.88</p>
+                        <p class="text-xs md:text-sm text-espresso-light mt-0.5">IPK Cumlaude UNS</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark">4+</p>
+                        <p class="text-xs md:text-sm text-espresso-light mt-0.5">Pengalaman Industri &amp; BPS</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark">3</p>
+                        <p class="text-xs md:text-sm text-espresso-light mt-0.5">Sertifikasi Kompetensi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-sm">
+                    <div class="absolute -inset-3 bg-latte rounded-3xl transform rotate-3 border border-latte-dark"></div>
+                    <div class="relative rounded-2xl overflow-hidden bg-[#9E9E9E] shadow-xl aspect-[4/5] border border-latte-dark">
+                        <img 
+                            src="Gemini_Generated_Image_imzjsrimzjsrimzj.jpg" 
+                            alt="Foto Profil Adi Putra Maulana" 
+                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso-dark/80 via-espresso-dark/20 to-transparent p-6 text-latte-light">
+                            <p class="text-xs uppercase tracking-widest text-latte/80">Domisili</p>
+                            <p class="font-medium text-sm flex items-center gap-1.5 mt-0.5">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-caramel"></i>
+                                Boyolali, Jawa Tengah
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT & EDUCATION SECTION ==================== -->
+    <section id="tentang" class="py-20 bg-latte/60 border-y border-latte-dark/60 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-6 space-y-5">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Tentang Saya</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark">
+                        Ketelitian Administrasi &amp; Empati Pengembangan SDM
+                    </h2>
+                    <p class="text-espresso-light leading-relaxed">
+                        Berbekal latar belakang akademik di bidang Manajemen Administrasi serta pengalaman lapangan yang beragam—mulai dari pengelolaan pelatihan karyawan di perusahaan manufaktur berskala besar hingga pendataan sensus nasional—saya terbiasa bekerja dengan standar akurasi tinggi, komunikatif, dan terstruktur.
+                    </p>
+                    <p class="text-espresso-light leading-relaxed">
+                        Saya memiliki minat mendalam dalam pengelolaan sumber daya manusia (HR), penyusunan Standar Operasional Prosedur (SOP), administrasi perkantoran modern, serta visualisasi informasi yang komunikatif.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-latte-light p-8 rounded-2xl border border-latte-dark shadow-sm h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <span class="px-3 py-1 bg-espresso text-latte-light text-xs font-medium rounded-full">
+                                    2023 – 2026
+                                </span>
+                                <span class="text-sm font-semibold text-caramel">
+                                    IPK: 3.88 / 4.00
+                                </span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-espresso-dark">
+                                Universitas Sebelas Maret (UNS)
+                            </h3>
+                            <p class="text-espresso font-medium mt-1">
+                                Diploma Tiga (D3) Manajemen Administrasi — Surakarta
+                            </p>
+                            
+                            <div class="mt-6 space-y-3 text-sm text-espresso-light">
+                                <p class="font-semibold text-espresso-dark">Fokus &amp; Proyek Akademik:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2.5">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i>
+                                        <span>Menyelesaikan proyek SDM: administrasi rekrutmen karyawan, penyusunan Job Description &amp; SOP perusahaan, serta sistem penggajian.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i>
+                                        <span>Mata kuliah relevan: Manajemen SDM, Administrasi Perkantoran, Kesekretarisan, Akuntansi, dan Manajemen Kompensasi.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WORK & INTERNSHIP EXPERIENCE ==================== -->
+    <section id="pengalaman" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Rekam Jejak Profesional</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark mt-2">
+                    Pengalaman Kerja &amp; Magang
+                </h2>
+                <p class="text-espresso-light mt-3">
+                    Kontribusi nyata dalam pengelolaan sumber daya manusia, administrasi proyek, dan validasi data lapangan.
+                </p>
+            </div>
+
+            <div class="relative border-l-2 border-latte-dark ml-3 md:ml-6 space-y-12">
+
+                <!-- Item 1 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-espresso-dark ring-4 ring-latte-light"></span>
+                    <div class="bg-latte/50 hover:bg-latte transition-colors p-6 md:p-8 rounded-2xl border border-latte-dark/80">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl md:text-2xl font-bold text-espresso-dark">
+                                Mitra Pendataan Sensus Ekonomi 2026
+                            </h3>
+                            <span class="px-3 py-1 bg-latte-light border border-latte-dark text-espresso text-xs font-semibold rounded-full">
+                                Juni 2026 – Agustus 2026
+                            </span>
+                        </div>
+                        <p class="text-caramel font-medium text-sm mb-4">
+                            Badan Pusat Statistik (BPS) Kabupaten Boyolali
+                        </p>
+                        <ul class="space-y-2 text-sm md:text-base text-espresso-light">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Melakukan pendataan dan wawancara langsung dengan pelaku usaha sejumlah 650 prelist (13 SLS) meliputi UMKM hingga perusahaan besar.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Mengumpulkan informasi usaha sesuai instrumen sensus serta melakukan penginputan, pemeriksaan, dan verifikasi akurasi data lapangan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-caramel ring-4 ring-latte-light"></span>
+                    <div class="bg-latte/50 hover:bg-latte transition-colors p-6 md:p-8 rounded-2xl border border-latte-dark/80">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl md:text-2xl font-bold text-espresso-dark">
+                                HR Talent &amp; Development
+                            </h3>
+                            <span class="px-3 py-1 bg-latte-light border border-latte-dark text-espresso text-xs font-semibold rounded-full">
+                                Apr – Jul 2025 &amp; Jan – Feb 2026
+                            </span>
+                        </div>
+                        <p class="text-caramel font-medium text-sm mb-4">
+                            PT Pan Brothers Tbk — Boyolali, Jawa Tengah
+                        </p>
+                        <ul class="space-y-2 text-sm md:text-base text-espresso-light">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Mendukung pelaksanaan program pelatihan dan pengembangan karyawan, mulai dari persiapan materi hingga koordinasi peserta.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Melakukan evaluasi pasca-pelatihan dan menyusun laporan analisis efektivitas pelatihan menggunakan Microsoft Excel.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-caramel ring-4 ring-latte-light"></span>
+                    <div class="bg-latte/50 hover:bg-latte transition-colors p-6 md:p-8 rounded-2xl border border-latte-dark/80">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl md:text-2xl font-bold text-espresso-dark">
+                                Staff Administrasi
+                            </h3>
+                            <span class="px-3 py-1 bg-latte-light border border-latte-dark text-espresso text-xs font-semibold rounded-full">
+                                Agustus 2025 – Januari 2026
+                            </span>
+                        </div>
+                        <p class="text-caramel font-medium text-sm mb-4">
+                            PT Digitama Sinergi Indonesia (Digitama Consulting) — Sleman, Yogyakarta
+                        </p>
+                        <ul class="space-y-2 text-sm md:text-base text-espresso-light">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Mengelola dokumen administrasi operasional proyek secara terstruktur, termasuk penyusunan Surat Perintah Kerja (SPK).</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Mengelola sistem pengarsipan dokumen digital pada website perusahaan serta memublikasikan rilis pers (press release) kegiatan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-espresso-light ring-4 ring-latte-light"></span>
+                    <div class="bg-latte/50 hover:bg-latte transition-colors p-6 md:p-8 rounded-2xl border border-latte-dark/80">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl md:text-2xl font-bold text-espresso-dark">
+                                Petugas Lapangan Sensus Pertanian 2023
+                            </h3>
+                            <span class="px-3 py-1 bg-latte-light border border-latte-dark text-espresso text-xs font-semibold rounded-full">
+                                2023
+                            </span>
+                        </div>
+                        <p class="text-caramel font-medium text-sm mb-4">
+                            Badan Pusat Statistik (BPS)
+                        </p>
+                        <ul class="space-y-2 text-sm md:text-base text-espresso-light">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-espresso font-bold">•</span>
+                                <span>Melakukan pemutakhiran data dan wawancara langsung dengan petani perorangan maupun perusahaan pertanian terkait komoditas dan luas lahan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LEADERSHIP & ORGANIZATIONS ==================== -->
+    <section id="organisasi" class="py-20 bg-latte/60 border-y border-latte-dark/60 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-14">
+                <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Kepemimpinan &amp; Kolaborasi</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark mt-2">
+                    Organisasi &amp; Kepanitiaan
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-latte-light p-7 rounded-2xl border border-latte-dark hover:border-caramel transition-all">
+                    <div class="flex items-center justify-between text-xs text-espresso-light mb-3">
+                        <span class="font-semibold uppercase tracking-wider text-caramel">Organisasi Mahasiswa</span>
+                        <span>Des 2024 – Des 2025</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark">
+                        Kepala Bidang Media dan Informasi
+                    </h3>
+                    <p class="text-sm font-medium text-espresso mb-4">Himpunan Mahasiswa Manajemen Administrasi UNS</p>
+                    <p class="text-sm text-espresso-light leading-relaxed">
+                        Menyusun program kerja divisi jangka pendek dan panjang, mengarahkan strategi konten visual (desain &amp; video), serta memonitoring dan mengevaluasi kinerja staf secara berkala.
+                    </p>
+                </div>
+
+                <div class="bg-latte-light p-7 rounded-2xl border border-latte-dark hover:border-caramel transition-all">
+                    <div class="flex items-center justify-between text-xs text-espresso-light mb-3">
+                        <span class="font-semibold uppercase tracking-wider text-caramel">Kepanitiaan</span>
+                        <span>2024</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark">
+                        Ketua Pelaksana (MASTERYS)
+                    </h3>
+                    <p class="text-sm font-medium text-espresso mb-4">Manajemen Administrasi Empowering Hard and Soft Skill</p>
+                    <p class="text-sm text-espresso-light leading-relaxed">
+                        Memimpin penuh perencanaan dan eksekusi acara pengembangan kompetensi mahasiswa, serta mengoordinasikan seluruh divisi panitia dengan steering committee.
+                    </p>
+                </div>
+
+                <div class="bg-latte-light p-7 rounded-2xl border border-latte-dark hover:border-caramel transition-all">
+                    <div class="flex items-center justify-between text-xs text-espresso-light mb-3">
+                        <span class="font-semibold uppercase tracking-wider text-caramel">Organisasi Mahasiswa</span>
+                        <span>Des 2023 – Des 2024</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark">
+                        Staff Bidang Media dan Informasi
+                    </h3>
+                    <p class="text-sm font-medium text-espresso mb-4">Himpunan Mahasiswa Manajemen Administrasi UNS</p>
+                    <p class="text-sm text-espresso-light leading-relaxed">
+                        Mengelola komunikasi publik melalui media sosial himpunan, merencanakan penjadwalan publikasi, serta memproduksi konten kreatif untuk memperkuat branding organisasi.
+                    </p>
+                </div>
+
+                <div class="bg-latte-light p-7 rounded-2xl border border-latte-dark hover:border-caramel transition-all">
+                    <div class="flex items-center justify-between text-xs text-espresso-light mb-3">
+                        <span class="font-semibold uppercase tracking-wider text-caramel">Kepanitiaan Fakultas</span>
+                        <span>2023 – 2024</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark">
+                        Kepala Bidang Kampanye &amp; Staf Operasional
+                    </h3>
+                    <p class="text-sm font-medium text-espresso mb-4">KPU Sekolah Vokasi UNS &amp; Vocazens of the Champions (VOC)</p>
+                    <p class="text-sm text-espresso-light leading-relaxed">
+                        Merancang strategi kampanye peningkatan partisipasi pemilih fakultas (KPU SV UNS) serta mengelola logistik dan kesiapan operasional acara skala kampus (VOC).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS, CERTIFICATIONS & ACHIEVEMENT ==================== -->
+    <section id="keahlian" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto space-y-20">
+            
+            <div class="bg-espresso-dark text-latte-light rounded-3xl p-8 md:p-12 shadow-lg relative overflow-hidden">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-caramel/20 border border-caramel/40 text-caramel text-xs font-semibold uppercase tracking-wider">
+                            <i data-lucide="award" class="w-4 h-4"></i>
+                            <span>Pencapaian Kompetisi 2026</span>
+                        </div>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold">
+                            Juara 2 Lomba Desain Infografis — MAGIC 2026
+                        </h3>
+                        <p class="text-latte/80 text-sm md:text-base leading-relaxed">
+                            Meraih penghargaan pada ajang <em>Manajemen Administrasi Great Innovation Competition (MAGIC) 2026</em> UNS melalui karya bertema <strong>"Transformasi Digital dalam Kehidupan Mahasiswa dan Dunia Kerja"</strong>—membuktikan kemampuan sintesis data dan komunikasi visual.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 flex lg:justify-end">
+                        <div class="px-6 py-4 rounded-2xl bg-espresso border border-latte/15 text-center">
+                            <p class="font-serif text-3xl font-bold text-caramel">2nd Place</p>
+                            <p class="text-xs text-latte/70 mt-1">Visual Information &amp; Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Kompetensi</span>
+                        <h2 class="font-serif text-3xl font-bold text-espresso-dark mt-1">Keahlian Utama</h2>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-espresso">Hard Skills &amp; Perangkat Lunak</h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">Microsoft Excel</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">Microsoft Word</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">Microsoft PowerPoint</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">Google Workspace</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">System Administration</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">Canva (Desain Grafis)</span>
+                            <span class="px-4 py-2 bg-latte border border-latte-dark rounded-xl text-sm font-medium text-espresso-dark">CapCut (Video Editing)</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-espresso">Soft Skills</h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Kepemimpinan</span>
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Komunikasi Efektif</span>
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Manajemen Waktu</span>
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Kerjasama Tim</span>
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Integritas</span>
+                            <span class="px-4 py-2 bg-latte-light border border-latte-dark rounded-xl text-sm text-espresso-light">Adaptif &amp; Open-Minded</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Kredensial Resmi</span>
+                        <h2 class="font-serif text-3xl font-bold text-espresso-dark mt-1">Sertifikasi Kompetensi</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-5 bg-latte/50 rounded-2xl border border-latte-dark flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="font-bold text-espresso-dark">Certified Secretary</h4>
+                                <p class="text-sm text-espresso-light mt-0.5">LSP Kompetensi Administrasi Perkantoran</p>
+                            </div>
+                            <span class="text-xs font-medium px-3 py-1 bg-latte-light rounded-full border border-latte-dark text-espresso shrink-0">
+                                2026 – 2029
+                            </span>
+                        </div>
+
+                        <div class="p-5 bg-latte/50 rounded-2xl border border-latte-dark flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="font-bold text-espresso-dark">Junior Administrative Assistant</h4>
+                                <p class="text-sm text-espresso-light mt-0.5">Lembaga Sertifikasi Profesi Universitas Sebelas Maret</p>
+                            </div>
+                            <span class="text-xs font-medium px-3 py-1 bg-latte-light rounded-full border border-latte-dark text-espresso shrink-0">
+                                2026 – 2029
+                            </span>
+                        </div>
+
+                        <div class="p-5 bg-latte/50 rounded-2xl border border-latte-dark flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="font-bold text-espresso-dark">TOEIC Certification</h4>
+                                <p class="text-sm text-espresso-light mt-0.5">International Test Center (ITC)</p>
+                            </div>
+                            <span class="text-xs font-medium px-3 py-1 bg-latte-light rounded-full border border-latte-dark text-espresso shrink-0">
+                                2026 – 2028
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT & FOOTER ==================== -->
+    <footer id="kontak" class="bg-espresso-dark text-latte-light pt-20 pb-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-14">
+                <span class="text-xs font-semibold uppercase tracking-widest text-caramel">Mari Terhubung</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold">
+                    Siap Berkontribusi untuk Tim Anda
+                </h2>
+                <p class="text-latte/75 text-base">
+                    Terbuka untuk peluang karier di bidang Human Resources (HR), Administrasi Perkantoran, maupun Operasional Proyek.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <a href="mailto:dptrmaulana1@gmail.com" class="p-6 rounded-2xl bg-espresso/60 border border-latte/15 hover:border-caramel transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-full bg-caramel/20 flex items-center justify-center text-caramel mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs uppercase tracking-wider text-latte/60">Email</p>
+                    <p class="font-medium text-sm md:text-base mt-1 break-all">dptrmaulana1@gmail.com</p>
+                </a>
+
+                <a href="https://wa.me/6282135007250" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-espresso/60 border border-latte/15 hover:border-caramel transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-full bg-caramel/20 flex items-center justify-center text-caramel mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs uppercase tracking-wider text-latte/60">Telepon / WhatsApp</p>
+                    <p class="font-medium text-sm md:text-base mt-1">+62 821-3500-7250</p>
+                </a>
+
+                <a href="https://linkedin.com/in/adiputramaulanaa" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-espresso/60 border border-latte/15 hover:border-caramel transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-full bg-caramel/20 flex items-center justify-center text-caramel mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs uppercase tracking-wider text-latte/60">LinkedIn</p>
+                    <p class="font-medium text-sm md:text-base mt-1">in/adiputramaulanaa</p>
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-latte/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-latte/60">
+                <p>&copy; 2026 Adi Putra Maulana. Hak Cipta Dilindungi.</p>
+                <p class="italic font-serif text-latte/80">"A journey of Knowledge, Care &amp; Impact"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
